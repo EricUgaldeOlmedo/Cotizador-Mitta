@@ -1,0 +1,85 @@
+
+#deny from all
+#deny all access
+
+
+
+
+#Impedir que se pueda ver el listado de contenidos de un directorio
+Options All -Indexes
+
+
+
+# Forzar la codificación UTF-8 en varios tipos de archivos
+AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+
+
+RewriteEngine on
+
+##################
+#LADO USUARIO
+##################
+
+
+#http://datalain.ddns.net/cotizador/vista/inicio.php?action=cambio_clave
+RewriteRule     ^CurOD8$   inicio.php?action=cambio_clave [QSA,L]
+
+#cierresesion.php
+
+#http://datalain.ddns.net/cotizador/vista/inicio.php?action=lista_cotizacion
+RewriteRule     ^ZHyvIA$   inicio.php?action=lista_cotizacion [QSA,L]
+
+#http://datalain.ddns.net/cotizador/vista/inicio.php?action=modificar_cotizacion
+#RewriteRule     ^aHZggg$   inicio.php?action=modificar_cotizacion [QSA,L]
+
+
+#http://datalain.ddns.net/cotizador/vista/inicio.php
+RewriteRule     ^6mwZHDL$   inicio.php [QSA,L]
+
+#http://datalain.ddns.net/cotizador/vista/inicio.php?action=nueva_cotizacion
+RewriteRule     ^cfk1A$   inicio.php?action=nueva_cotizacion [QSA,L]
+
+#http://datalain.ddns.net/cotizador/vista/inicio.php?action=nueva_empresa
+RewriteRule     ^CDrtyh$   inicio.php?action=nueva_empresa [QSA,L]
+
+
+
+
+##################
+#LADO ADMINISTRADOR
+##################
+#http://datalain.ddns.net/cotizador/vista/inicio_adm.php
+RewriteRule     ^6qMWAR   inicio_adm.php
+
+
+#http://datalain.ddns.net/cotizador/vista/inicio_adm.php?action=asigna_cotizacion_adm
+RewriteRule     ^ce07040f34783a783a95eda84dfb75a3   inicio_adm.php?action=asigna_cotizacion_adm [QSA,L]
+
+#http://datalain.ddns.net/cotizador/vista/inicio_adm.php?action=cambio_clave_adm
+RewriteRule     ^d9b28f0cfd20985f1c2c59715451c0cb   inicio_adm.php?action=cambio_clave_adm [QSA,L]
+
+#http://datalain.ddns.net/cotizador/vista/inicio_adm.php?action=lista_cotizacion_adm
+RewriteRule     ^e54f15204a8dd16e4ce7d5ff7e14e150   inicio_adm.php?action=lista_cotizacion_adm [QSA,L]
+
+#http://datalain.ddns.net/cotizador/vista/inicio_adm.php?action=nueva_cotizacion_adm
+RewriteRule     ^1d32c0beb9c4c1c6d5e62a646dfe7c55   inicio_adm.php?action=nueva_cotizacion_adm [QSA,L]
+
+#http://datalain.ddns.net/cotizador/vista/inicio_adm.php?action=nuevo_usuario_adm 
+RewriteRule     ^ffd57a055580b9ed747549578edd0244   inicio_adm.php?action=nuevo_usuario_adm [QSA,L]
+
+#http://datalain.ddns.net/cotizador/vista/inicio_adm.php?action=nueva_empresa_adm
+RewriteRule     ^8c24e925075c5a0c307fa2b88ab08f3b   inicio_adm.php?action=nueva_empresa_adm [QSA,L]
+
+
+#######################
+#LADO EJECUTIVO_NEGOCIO
+#######################
+
+# inicio_eje_n
+
+#http://datalain.ddns.net/cotizador/vista/inicio_eje_n.php?action=inicio_eje_n
+RewriteRule      ^4098cc4684f6b33e4f6a2b2993aa43e5 inicio_eje_n.php?action=inicio_eje_n [QSA,L]
+
+
+#http://datalain.ddns.net/cotizador/vista/inicio_eje_n.php?action=lista_cotizacion_eje_n
+RewriteRule      ^5f825ebe6ff999871fbaf69e0ea1076c inicio_eje_n.php?action=lista_cotizacion_eje_n [QSA,L]

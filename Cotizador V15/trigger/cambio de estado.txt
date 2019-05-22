@@ -1,0 +1,30 @@
+
+
+#TRIGGE QUE AL MOMENTO DE ENVIAR LA COTIZACION INSERTA DATOS EN LA TABLA ASIGNACION
+CREATE TRIGGER `tg_envio_cotizacion` AFTER UPDATE ON `cotizacion` 
+FOR EACH ROW insert into asignacion 
+(COTIZACION_idcotizacion,estado_cotizacion,fecha_negocio,fecha_asignacion,USUARIO_idusuario,usuario)
+
+values
+ 
+(new.idcotizacion,new.estado_cotizacion,new.fecha,null,null,null);
+
+
+
+
+REACER TRIGGER
+
+#TRIGGE QUE AL MOMENTO DE ASIGNAR LA  COTIZACION AL EJECUTIVO DE NEGOCIO  INSERTA DATOS EN LA TABLA VALORIZAR
+
+
+
+CREATE TRIGGER `tg_valoriza` AFTER UPDATE ON `asignacion` FOR EACH ROW insert into valorizar
+(fecha,ASIGNACION_idASIGNACION,num_cotizacion,usuario,uf_12_meses,uf_24_meses,uf_36_meses,uf_48_meses,uf_60_meses,
+
+uf_72_meses)
+ values 
+(null,ASIGNACION_idASIGNACION,num_cotizacion,usuario,null,null,null,null,null,null,null);
+
+
+
+
